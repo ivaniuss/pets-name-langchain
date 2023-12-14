@@ -10,14 +10,6 @@ COPY . .
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Load environment variables from .env during the build
-ARG ENV_FILE
-ENV ENV_FILE=${ENV_FILE:-.env}
-RUN if [ -f "$ENV_FILE" ]; then export $(cat $ENV_FILE | xargs); fi
-
-# Define environment variable
-ENV OPENAI_API_KEY=${OPENAI_API_KEY:-default_value}
-
 # Make port 8501 available to the world outside this container
 EXPOSE 8501
 
