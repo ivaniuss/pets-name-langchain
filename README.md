@@ -43,7 +43,7 @@ Remember to store your `.env` variable `OPENAI_API_KEY` before. You can get your
 ### Using Basic or Virtual Environment
 
 ```bash
-`streamlit run app.py`
+streamlit run app.py
 ```
 
 ### Using Docker
