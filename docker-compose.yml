@@ -1,0 +1,8 @@
+version: '3'
+services:
+  your-app:
+    image: pets-name-langchain
+    ports:
+      - "4000:8501"
+    env_file:
+      - .env
